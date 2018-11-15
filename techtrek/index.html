@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="./index.js"></script>
+		<link rel="stylesheet" href="./index.css">
+	</head>
+
+	<body style="margin:0">
+		<div id="login" class="loginbg">
+			<div class="center">
+				<h1 class="heading">Tech Trek Sample Portal</h1><br>
+
+				<a id="loginlink" href="https://www.dbs.com/sandbox/api/sg/v1/oauth/authorize?client_id=45834350-24bc-4fb0-9867-3f7ca30e650e&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FHackaton%2Findex.html&scope=Read&response_type=code&state=0399">
+					<button class="btn">Continue</button>
+				</a>
+				<h2 id="loadingtext" class="heading">Loading...</h2>
+			</div>
+		</div>
+
+		<div id="showdetails">
+			<div style="padding-top: 30px">
+				<h3 style="text-align: center">Retrieve List of Morgage Loan Applicants </h3>
+				<table>
+					<thead>
+						<tr>
+							<th class="tablehead">Applicant ID</th>
+							<th class="tablehead">Salutation</th>
+							<th class="tablehead">Full Name</th>
+						</tr>
+
+						<tbody id="tablebod">
+
+						</tbody>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
