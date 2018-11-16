@@ -12,7 +12,7 @@ $(document).ready(()=>{
 	var clientId = '45834350-24bc-4fb0-9867-3f7ca30e650e';
 	var clientSecret = 'fdd4059c-b192-43b4-bd2e-6d75f5637e7f';
 
-	// use https://cors-anywhere.herokuapp.com/ if you are planning to host 
+	// use https://cors-anywhere.herokuapp.com/ if you are planning to host
 	// a local webserver for your app to bypass CORS issue with OAuth2
 	// of course, this is not recommended also in a real world application
 	var corsbypass = "https://cors-anywhere.herokuapp.com/";
@@ -20,9 +20,13 @@ $(document).ready(()=>{
 
 	var empty = "";
 
+	$(function () {
+	  $('[data-toggle="popover"]').popover()
+	})
+
 	$('#showdetails').hide();
 	$('#loadingtext').hide();
-	
+
 	//if no query params, i.e its the homepage route
 	if(qs[empty])
 	{
@@ -31,7 +35,7 @@ $(document).ready(()=>{
 	}
 	else
 	{
-		// if the code parameter is there, 
+		// if the code parameter is there,
 		// then we have been redirected by the DBS OAuth login page
 		if(qs['code'])
 		{
@@ -52,7 +56,7 @@ $(document).ready(()=>{
 			$('#showdetails').show();
 
 		}
-		
+
 	}
 
 	//function to parse query parameters in the url
@@ -112,7 +116,7 @@ $(document).ready(()=>{
 		});
 	}
 
-	// this function gets the list of 
+	// this function gets the list of
 	// morgage loan applicants and display
 	// them in a table
 	function GetApplicantData()
@@ -137,7 +141,7 @@ $(document).ready(()=>{
 		}
 
 		$.ajax(applicantSettings).done(function (response) {
-		  
+
 		  $('#showdetails').show();
 
 		  //render each row based on the data we retrieved
@@ -153,7 +157,7 @@ $(document).ready(()=>{
 		  					`
 		  	$('#tablebod').append(tabletext);
 		  }
-		  
+
 		});
 	}
 });
